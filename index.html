@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная | Книговед</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./data/books.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px;">
+            <img src="./img/knigoved.png" alt="Лого" style="height: 70px; width: auto; object-fit: contain;">
+            Книговед
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="catalog.html">Каталог изданий</a></li>
+                <li><a href="cart.html">Корзина <span class="cart-count" id="cart-counter">0</span></a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section class="hero-categories-section">
+    <div class="container">
+        <div class="hero-header">
+            <h1>Книги для дома, отдыха и вдохновения</h1>
+            <p>Бестселлеры, мировые новинки и любимая классика. Найдите историю, которая захватит вас с первой страницы.</p>
+        </div>
+
+        <div class="categories-carousel-wrapper">
+            <button class="carousel-btn prev-btn" id="scrollLeftBtn" aria-label="Предыдущие категории">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+
+            <div class="categories-showcase" id="categoriesCarousel">
+                <div class="showcase-track">
+                    <a href="catalog.html?category=fiction" class="showcase-card">
+                        <div class="card-icon"><img src="./img/115-1152248_book-icon-transparent-background.png" alt="Литература" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>Художественная литература</h3>
+                        <span>Мировая классика</span>
+                    </a>
+                    <a href="catalog.html?category=scifi" class="showcase-card">
+                        <div class="card-icon"><img src="./img/fantastika.png" alt="Фантастика" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>Фантастика</h3>
+                        <span>Sci-Fi, WH40k, Star Wars</span>
+                    </a>
+                    <a href="catalog.html?category=kids" class="showcase-card">
+                        <div class="card-icon"><img src="./img/teddy.jpg" alt="Детские книги" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>Детские книги</h3>
+                        <span>Сказки и обучение</span>
+                    </a>
+                    <a href="catalog.html?category=psychology" class="showcase-card">
+                        <div class="card-icon"><img src="./img/brain.png" alt="Психология" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>Психология</h3>
+                        <span>Саморазвитие и разум</span>
+                    </a>
+                    <a href="catalog.html?category=business" class="showcase-card">
+                        <div class="card-icon"><img src="./img/business.jpg" alt="Бизнес" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>Бизнес и карьера</h3>
+                        <span>Менеджмент, финансы</span>
+                    </a>
+                    <a href="catalog.html?category=history" class="showcase-card">
+                        <div class="card-icon"><img src="./img/globe.png" alt="История" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>История и общество</h3>
+                        <span>Политика, цивилизации</span>
+                    </a>
+                    <a href="catalog.html?category=hobby" class="showcase-card">
+                        <div class="card-icon"><img src="./img/pallete.jpg" alt="Хобби" style="width: 48px; height: 48px; object-fit: contain;"></div>
+                        <h3>Хобби и обучение</h3>
+                        <span>Искусство, навыки</span>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-btn next-btn" id="scrollRightBtn" aria-label="Следующие категории">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<main class="container">
+    <div class="section-header" style="margin-top: var(--space-xl);">
+        <h2>Выбор читателей</h2>
+        <a href="catalog.html" class="view-all">Смотреть весь каталог →</a>
+    </div>
+    
+    <div class="books-grid" id="popular-books-grid">
+    </div>
+
+    <div id="book-of-month-container"></div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Книжный интернет-магазин «Книговед». Все права защищены.<br>Доставка по всей стране.</p>
+    </div>
+</footer>
+
+</body>
+</html>

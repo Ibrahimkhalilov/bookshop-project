@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Книговед</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./data/books.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Книговед</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html" class="active">Каталог изданий</a></li>
+                <li><a href="cart.html">Корзина <span class="cart-count" id="cart-counter">0</span></a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <div class="catalog-header container">
+        <h1 style="margin: var(--space-lg) 0;">Каталог литературы</h1>
+    </div>
+
+    <main class="container catalog-layout" style="margin-bottom: var(--space-xl);">
+        
+        <aside class="catalog-sidebar">
+            <div class="filter-box">
+                <h3>Поиск по каталогу</h3>
+                <input type="text" id="searchInput" class="search-input" placeholder="Название или автор...">
+            </div>
+
+            <div class="filter-box">
+                <h3>Жанры</h3>
+                <ul class="category-list">
+                    <li><button class="filter-btn active" data-filter="all">Все книги</button></li>
+                    <li><button class="filter-btn" data-filter="fiction">Художественная литература</button></li>
+                    <li><button class="filter-btn" data-filter="scifi">Фантастика</button></li>
+                    <li><button class="filter-btn" data-filter="kids">Детские книги</button></li>
+                    <li><button class="filter-btn" data-filter="psychology">Психология и саморазвитие</button></li>
+                    <li><button class="filter-btn" data-filter="business">Бизнес и карьера</button></li>
+                    <li><button class="filter-btn" data-filter="history">История и общество</button></li>
+                    <li><button class="filter-btn" data-filter="hobby">Хобби и обучение</button></li>
+                    <li><button class="filter-btn" data-filter="gifts">Подарочные издания</button></li>
+                    <li><button class="filter-btn" data-filter="it">IT и программирование</button></li>
+                    <li><button class="filter-btn" data-filter="1c">1С и бухгалтерия</button></li>
+                    <li><button class="filter-btn" data-filter="math">Математика и науки</button></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="books-grid" id="catalogGrid">
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Книжный интернет-магазин «Книговед». Все права защищены.<br>Доставка по всей стране.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

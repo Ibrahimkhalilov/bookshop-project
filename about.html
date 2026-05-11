@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас | Книговед</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./data/books.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Книговед</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог изданий</a></li>
+                <li><a href="cart.html">Корзина <span class="cart-count" id="cart-counter">0</span></a></li>
+                <li><a href="about.html" class="active">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+        
+        <h1 style="margin-bottom: var(--space-lg); font-size: 36px;">О магазине «Книговед»</h1>
+        
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg); line-height: 1.8; font-size: 18px; color: var(--color-text-main);">
+            
+            <p>Добро пожаловать в <strong>«Книговед»</strong> — ваш уютный книжный уголок в интернете. Мы верим, что каждая книга — это портал в новый мир, полный удивительных открытий, искренних эмоций и бесценных знаний.</p>
+            
+            <p>Наш проект был создан командой преданных любителей литературы. Наша главная цель — сделать качественные бумажные книги доступными для каждого. Мы тщательно отбираем ассортимент, чтобы на наших виртуальных полках вы всегда могли найти как признанную мировую классику, так и самые горячие новинки из мира фантастики, бизнеса, IT и детской литературы.</p>
+            
+            <h2 style="margin-top: var(--space-md); font-size: 28px; border-bottom: 2px solid var(--color-border); padding-bottom: 10px;">Почему выбирают нас?</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg); margin-top: var(--space-sm);">
+                <div style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);">
+                    <div style="font-size: 36px; margin-bottom: 15px;">📚</div>
+                    <h3 style="margin-bottom: 10px; font-size: 20px;">Широкий ассортимент</h3>
+                    <p style="font-size: 15px; color: var(--color-text-muted); line-height: 1.5; margin: 0;">От редких подарочных изданий и комиксов до сложной профессиональной литературы по программированию, алгоритмам и 1С.</p>
+                </div>
+                
+                <div style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);">
+                    <div style="font-size: 36px; margin-bottom: 15px;">⚡</div>
+                    <h3 style="margin-bottom: 10px; font-size: 20px;">Бережная доставка</h3>
+                    <p style="font-size: 15px; color: var(--color-text-muted); line-height: 1.5; margin: 0;">Мы аккуратно упаковываем каждую книгу, чтобы она пришла в идеальном состоянии, и доставляем заказы в кратчайшие сроки.</p>
+                </div>
+                
+                <div style="background: var(--color-surface); padding: var(--space-lg); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);">
+                    <div style="font-size: 36px; margin-bottom: 15px;">🏷️</div>
+                    <h3 style="margin-bottom: 10px; font-size: 20px;">Честные цены</h3>
+                    <p style="font-size: 15px; color: var(--color-text-muted); line-height: 1.5; margin: 0;">У нас регулярные скидки, акции и приятные цены в манатах. Мы стараемся делать чтение доступным хобби!</p>
+                </div>
+            </div>
+
+            <div style="margin-top: var(--space-lg); padding: 40px var(--space-xl); background: var(--color-primary); color: white; border-radius: var(--radius-md); text-align: center; box-shadow: var(--shadow-md);">
+                <h2 style="margin-bottom: 15px; color: white; font-size: 28px;">Остались вопросы?</h2>
+                <p style="margin-bottom: 25px; opacity: 0.9; font-size: 16px;">Напишите нам, и наша служба поддержки с радостью поможет вам с выбором книги или оформлением заказа.</p>
+                <a href="mailto:support@knigoved.az" class="btn btn-outline" style="background: white; color: var(--color-primary); border: none; font-weight: bold; padding: 12px 24px; border-radius: var(--radius-sm); text-decoration: none; display: inline-block;">Написать нам: support@knigoved.az</a>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Книжный интернет-магазин «Книговед». Все права защищены.<br>Доставка по всей стране.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

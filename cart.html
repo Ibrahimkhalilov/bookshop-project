@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина | Книговед</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./data/books.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Книговед</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог изданий</a></li>
+                <li><a href="cart.html" class="active">Корзина <span class="cart-count" id="cart-counter">0</span></a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="container cart-layout">
+
+        <section class="cart-items-section">
+            <h1 style="margin-bottom: var(--space-lg);">Ваша корзина</h1>
+            <div id="cart-container"></div>
+        </section>
+
+        <aside class="cart-summary">
+            <h3>Оформление заказа</h3>
+
+            <div class="summary-line">
+                <span>Итого к оплате:</span>
+                <span id="cart-total-price">0 ₼</span>
+            </div>
+
+            <form id="checkout-form">
+                <input type="text" id="order-name" class="form-input" placeholder="Ваше ФИО" required>
+                <input type="tel" id="order-phone" class="form-input" placeholder="Номер телефона" required>
+                <input type="email" id="order-email" class="form-input" placeholder="Электронная почта" required>
+                <input type="text" id="order-address" class="form-input" placeholder="Адрес доставки" required>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--space-md);">Оформить заказ</button>
+            </form>
+        </aside>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Книжный интернет-магазин «Книговед». Все права защищены.<br>Доставка по всей стране.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

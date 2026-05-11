@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книга | Книговед</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./data/books.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">Книговед</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Каталог изданий</a></li>
+                <li><a href="cart.html">Корзина <span class="cart-count" id="cart-counter">0</span></a></li>
+                <li><a href="about.html" class="active">О нас</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="container" style="margin-top: var(--space-xl); margin-bottom: var(--space-xl);">
+
+        <a href="catalog.html" style="color: var(--color-text-muted); font-size:14px; display:inline-block; margin-bottom: var(--space-lg); transition: color 0.2s;">← Вернуться в каталог</a>
+
+        <div class="book-detail-layout">
+
+            <div class="book-detail-cover">
+                <div id="b-cover" class="book-cover" style="height: 480px; font-size: 18px; box-shadow: var(--shadow-md); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;">
+                    Обложка книги
+                </div>
+            </div>
+
+            <div class="book-detail-info">
+                <span class="book-category" id="b-category">Загрузка категории...</span>
+                
+                <h1 id="b-title" style="font-size: 36px; margin: var(--space-sm) 0 var(--space-xs); line-height: 1.2;">Загрузка названия...</h1>
+                
+                <p id="b-author" style="color: var(--color-text-muted); font-size: 18px; margin-bottom: var(--space-md);">Загрузка автора...</p>
+
+                <div style="display:flex; align-items: center; gap: 8px; margin-bottom: var(--space-md);">
+                    <span class="stars" style="font-size: 18px; letter-spacing: 2px;">★★★★★</span> 
+                    <span id="b-reviews" style="color: var(--color-text-muted); font-size: 14px; font-weight: 500;">... оценок</span>
+                </div>
+
+                <p id="b-desc" style="margin-bottom: var(--space-lg); font-size: 16px; line-height: 1.8; color: var(--color-text-main);">
+                    Подождите, идет загрузка описания книги...
+                </p>
+
+                <table class="book-specs" style="margin-bottom: var(--space-lg);">
+                    <tr><td>Издательство:</td><td id="s-publisher">Питер</td></tr>
+                    <tr><td>Год издания:</td><td id="s-year">2024</td></tr>
+                    <tr><td>Страниц:</td><td id="s-pages">320</td></tr>
+                    <tr><td>Тип обложки:</td><td id="s-cover">Твёрдый переплет</td></tr>
+                    <tr><td>ISBN:</td><td id="s-isbn">978-5-4461-1970-9</td></tr>
+                    <tr><td>Возраст:</td><td id="s-age">16+</td></tr>
+                </table>
+
+                <div style="display:flex; align-items:center; gap: var(--space-xl); margin-top: var(--space-lg); border-top: 1px solid var(--color-border); padding-top: var(--space-lg);">
+                    <span id="b-price" style="font-size: 42px; font-weight: 800; color: var(--color-primary);">0 ₽</span>
+                    <button id="b-buy-btn" class="btn btn-primary add-to-cart-btn" style="padding: 16px 42px; font-size: 16px; border-radius: var(--radius-md);" data-id="" data-title="" data-price="">
+                        Добавить в корзину
+                    </button>
+                </div>
+            </div> 
+
+        </div> 
+
+        <section style="margin-top: calc(var(--space-xl) * 1.5);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--color-border); padding-bottom: var(--space-md); margin-bottom: var(--space-lg);">
+                <h2 style="font-size: 28px;">Отзывы читателей</h2>
+            </div>
+
+            <div id="b-review-container"></div>
+            
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Книжный интернет-магазин «Книговед». Все права защищены.<br>Доставка по всей стране.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
