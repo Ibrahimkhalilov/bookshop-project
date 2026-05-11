@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.main-nav a').forEach(link => {
+        const linkPath = link.getAttribute('href').split('/').pop();
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+    });
+
     updateCartCounter();
     renderCartPage();
     if (typeof booksData !== 'undefined') {
